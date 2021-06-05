@@ -37,6 +37,9 @@ class ResidentPayRecord(PayRecord):
     def get_tax(self):
         return tax_calculator.calc_res_tax(self.get_gross())
 
+    def get_details(self):
+        pass
+
 
 class WorkingHolidayPayRecord(PayRecord):
     def __init__(self, id, hours, rates, visa, year_to_date):
