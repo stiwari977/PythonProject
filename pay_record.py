@@ -29,6 +29,10 @@ class PayRecord:
 
 
 class ResidentPayRecord(PayRecord):
+    def __init__(self, _id: int, hours: List[float], rates: List[float]):
+        self._id = id
+        self._hours = hours
+        self._rates = rates
 
     def get_tax(self):
         return tax_calculator.calc_res_tax(self.get_gross())
